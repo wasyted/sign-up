@@ -1,23 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
+    font-weight: 300;
     margin: 0;
     padding: 0;
-}
-
-body{
-    height: 100vh;
+    color: #ffffff;
 }
 
 h1{
-    font-size: 2rem;
-    font-family: 'Eczar';
+    letter-spacing: -3px;
+    font-weight: 900;
+    font-size: 4rem;
+    font-family: 'Montserrat';
 }
 
 h2{
     font-size: 1.4rem;
-    width: clamp(45ch,75ch);
+    width: clamp(25ch,75ch);
 }
 
 p {
@@ -28,7 +27,7 @@ button{
     font-size: 1.2rem;
     width: 250px;
     height: 40px;
-    font-family: 'Eczar';
+    font-family: 'Montserrat';
     border-radius: 5px;
     border: 0;
     color: whitesmoke;
@@ -43,87 +42,127 @@ button:active{
     background-color: rgb(96, 124, 218);
 }
 
-.container{
-    color: #2e2e2e;
-    font-family: 'EB Garamond';
-    background-color: rgb(231, 231, 231);
-    display: flex;
-}
-
-.left-container{
-    flex: 1;
-    flex-direction: column;
+body{
     background-image: url(side-image.jpg);
     background-size: cover;
 }
 
+.container{
+    color: #2e2e2e;
+    font-family: 'Montserrat';
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-section{
+    padding: 50px;
+}
+
+.text-section h2:first-child{
+    margin-bottom: 20px;
+}
+
+.form-section{
+    flex: 1;
+}
+
+.sign-up-section{
+    flex: 1;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: #333333;
+}
+
+.left-container{
+    flex: 1;
+    height: 300px;
+    flex-basis: 300px;
+    flex-direction: column;
+    position: relative;
+}
+
 .left-container > div{
     display: flex;
-    position: relative;
+    
+}
+
+.logo-container{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    top: 100px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo{
     color: rgb(255, 255, 255);
-    position: relative;
-    top: 130px;
-    width: 100%;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.logo > img{
+    width: 55px;
+    height: auto;
+}
+
 .logo-background-square{
     width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.3;
-    background-color: #000000;
-    top: 130px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.32);
 }
 
 .right-container{
-    flex: 1;
-    padding-left: 100px;
-    padding-right: 100px;
+    background-color: #333333;
+    background-image:none;
+    height: 100dvh;
+    flex: 2;
+    flex-basis: 500px;
+    flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: center;
     box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.24);
     position:relative;
     z-index:10;
 }
 
 .main-text{
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
+}
+
+label{
+    padding-top: 10px;
 }
 
 .form{
-    font-family: 'ezrac';
-    color: #464646;
-    font-weight: bold;
-    background-color: rgb(236, 236, 236);
+    color: #ffffff;
+    font-weight: bolder;
+    background-color: #333333;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:30px;
-    font-size: 1.2rem;
-    position:relative;
+    padding: 50px;
+    padding-top: 0;
+    font-size: 1rem;
     z-index:10;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
 }
 
 #form-title{
+    font-weight: 600;
     padding-bottom: 20px;
 }
 
 .form .section{
     display: flex;
+    flex-wrap: wrap;
     column-gap: 60px;
     padding-bottom: 10px;
 }
@@ -138,27 +177,26 @@ button:active{
 
 #first_name, #last_name, #email, #phone, #password{
     font-size: 1rem;
-    font-weight: bold;
-    font-family: 'IBM Plex Sans';
+    font-family: 'Montserrat';
+    font-weight: 400;
     letter-spacing: 1px;
-    width: 240px;
+    width: clamp(150px,200px,240px);
     height: 20px;
     padding: 5px;
+    color: #ffffff;
     border: #464646 solid 0.5px;
     border-radius: 3px;
-}
-#phone{
-    width: 160px;
 }
 
 .create-account-section{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 50px;
 }
 
 #login-text{
-    font-family: 'IBM Plex Sans';
+    font-family: 'Montserrat';
     font-size: 1.0rem;
 }
 
