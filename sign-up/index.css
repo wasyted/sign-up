@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -10,44 +11,63 @@ body{
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'Eczar';
 }
 
 h2{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    width: clamp(45ch,75ch);
 }
 
 p {
     width: clamp(45ch,50%);
 }
 
+button{
+    font-size: 1.2rem;
+    width: 250px;
+    height: 40px;
+    font-family: 'Eczar';
+    border-radius: 5px;
+    border: 0;
+    color: whitesmoke;
+    background-color: rgb(47, 61, 107);
+}
+
+button:hover{
+    background-color: rgb(70, 91, 161);
+}
+
+button:active{
+    background-color: rgb(96, 124, 218);
+}
+
 .container{
-    height: 100vh;
     color: #2e2e2e;
     font-family: 'EB Garamond';
-    background-color: antiquewhite;
+    background-color: rgb(231, 231, 231);
     display: flex;
 }
 
-.container .left-container{
-    flex: 1.2;
-    height: 100vh;
+.left-container{
+    flex: 1;
     flex-direction: column;
     background-image: url(side-image.jpg);
-    background-position: -400px;
-    background-size: 250%;
-    backdrop-filter: grayscale(70%);
+    background-size: cover;
 }
 
 .left-container > div{
     display: flex;
     position: relative;
-    
 }
 
 .logo{
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 130px;
     width: 100%;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,23 +77,55 @@ p {
     width: 100%;
     height: 100%;
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.3;
     background-color: #000000;
+    top: 130px;
 }
 
-.container .right-container{
-    flex: 2;
+.right-container{
+    flex: 1;
+    padding-left: 100px;
+    padding-right: 100px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.24);
+    position:relative;
+    z-index:10;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .form{
-    padding-bottom: 100px;
+    font-family: 'ezrac';
+    color: #464646;
+    font-weight: bold;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:30px;
+    font-size: 1.2rem;
+    position:relative;
+    z-index:10;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+
+#form-title{
+    padding-bottom: 20px;
 }
 
 .form .section{
     display: flex;
-    column-gap: 200px
+    column-gap: 60px;
+    padding-bottom: 10px;
 }
 
 .section .left{
@@ -84,8 +136,34 @@ p {
     flex-direction: column;
 }
 
-#first_name, #last_name{
-    width: 170px
+#first_name, #last_name, #email, #phone, #password{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans';
+    letter-spacing: 1px;
+    width: 240px;
+    height: 20px;
+    padding: 5px;
+    border: #464646 solid 0.5px;
+    border-radius: 3px;
+}
+#phone{
+    width: 160px;
 }
 
+.create-account-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+#login-text{
+    font-family: 'IBM Plex Sans';
+    font-size: 1.0rem;
+}
+
+#image-author-credit{
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+}
